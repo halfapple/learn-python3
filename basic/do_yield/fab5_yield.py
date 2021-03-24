@@ -5,15 +5,15 @@
 # F(0)=0，F(1)=1, F(n)=F(n - 1)+F(n - 2)
 
 def fab_with_yield(mx):
-    a, b, n = 0, 1, 1
+    x, y, n = 0, 1, 1
     while n < mx:
-        yield b
-        a, b = b, a + b
+        yield y
+        x, y = y, x + y
         n += 1
 
 
 def test():
-    for i in fab_with_yield(10):
+    for i in fab_with_yield(5):
         print(i)
 
 
