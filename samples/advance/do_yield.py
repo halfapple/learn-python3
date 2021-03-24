@@ -6,9 +6,11 @@ def each_ascii(s):
         yield ord(ch)
     return '%s chars' % len(s)
 
+
 def yield_from(s):
     r = yield from each_ascii(s)
     print(r)
+
 
 def main():
     for x in each_ascii('abc'):
@@ -26,4 +28,5 @@ def main():
     for ch in yield_from('hello'):
         pass
 
-main()
+
+# main()
