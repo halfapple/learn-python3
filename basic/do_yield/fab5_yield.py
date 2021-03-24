@@ -20,5 +20,10 @@ def test():
 test()
 
 
+from inspect import isgeneratorfunction
+print(isgeneratorfunction(fab_with_yield))
 
 
+from collections import Iterable
+print(isinstance(fab_with_yield, Iterable))
+print(isinstance(fab_with_yield(5), Iterable))
